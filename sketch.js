@@ -1,12 +1,8 @@
-// Adicione o código para importar os módulos no arquivo sketch.js
+// Adicione o código para importar os módulos no arquivo sketch.js:
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-
-
-
-
 
 
 
@@ -17,17 +13,15 @@ function setup() {
 
   engine = Engine.create();
   world = engine.world;
-
   
   // Escreva o código dentro da função setup() no arquivo sketch.js para criar a variável
   // ball_options e o objeto bola.
 
-  var ball_options = {
+   var ball_options = {
     restitution: 0.95,
-    frictionAir: 0.01
+    frictionAir:0.01
   }
-  
- 
+   
    var ground_options ={
      isStatic: true
    };
@@ -35,14 +29,12 @@ function setup() {
   
 //    Crie o corpo retângulo chamado ground (solo) e adicione ao world dentro da função
 // setup():
- ground = Bodies.rectangle(100,400,400,20,ground_options);
-World.add(world,ground);
-
+  ground = Bodies.rectangle(100,400,400,20,ground_options);
+  World.add(world,ground);
     
   // Adicione o objeto bola ao mundo:
- ball = Bodies.circle(100,10,20,ball_options);
- World.add(world,ball);
-  
+  ball = Bodies.circle(100,10,20,ball_options);
+  World.add(world,ball);
   
   
   
@@ -64,7 +56,7 @@ function draw()
  
 console.log(ground.position.y);
 
-  drawSprite();
+  
   
 }
 
